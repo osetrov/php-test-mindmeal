@@ -1,0 +1,8 @@
+blitz.lo: /Users/apple/Sites/php-test-mindmeal.loc/temp/blitz-0.8.10/blitz.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/Users/apple/Sites/php-test-mindmeal.loc/temp/blitz-0.8.10 $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /Users/apple/Sites/php-test-mindmeal.loc/temp/blitz-0.8.10/blitz.c -o blitz.lo 
+$(phplibdir)/blitz.la: ./blitz.la
+	$(LIBTOOL) --mode=install cp ./blitz.la $(phplibdir)
+
+./blitz.la: $(shared_objects_blitz) $(BLITZ_SHARED_DEPENDENCIES)
+	$(LIBTOOL) --mode=link $(CC) $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) $(LDFLAGS) -o $@ -export-dynamic -avoid-version -prefer-pic -module -rpath $(phplibdir) $(EXTRA_LDFLAGS) $(shared_objects_blitz) $(BLITZ_SHARED_LIBADD)
+

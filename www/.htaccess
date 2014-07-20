@@ -1,0 +1,20 @@
+AddDefaultCharset utf-8
+AddType video/mp4 .mp4
+
+php_flag magic_quotes_gpc off
+php_flag register_globals off
+
+#ErrorDocument 404 /404.html
+
+RewriteEngine On
+
+RewriteBase /
+
+<Files .*>
+	Order Deny,Allow
+	Deny From All
+</Files>
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.php [L,QSA]

@@ -1,0 +1,14 @@
+<?php
+/**
+ * User: Pavel Osetrov
+ * Date: 19.07.14
+ * Time: 18:57
+ */
+
+define('CONFIG_TABLE_PARTITION_BIG', 1000000);
+define('CONFIG_TABLE_PARTITION_MEDIUM', 50000);
+define('CONFIG_TABLE_PARTITION_MEDIUM_2', 20000);
+define('CONFIG_TABLE_PARTITION_SMALL', 10000);
+
+define('CONFIG_USER_DEFAULT_CONTROLLER', 'poster');
+
