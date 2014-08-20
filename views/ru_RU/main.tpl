@@ -6,7 +6,7 @@
     <title>Тестовое задание Осетрова Павла для компании MindMeal</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
-    <link href="/css/style.css" rel="stylesheet">
+    <link href="/public/css/style.css" rel="stylesheet">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 

@@ -1,5 +1,7 @@
 <?php
 
+//phpinfo();
+
 define('PATH_CONFIGS',			realpath('../configs').DIRECTORY_SEPARATOR);
 define("PATH_CONTROLLERS",		realpath("../controllers").DIRECTORY_SEPARATOR);
 define("PATH_CLASSES",			realpath("../classes").DIRECTORY_SEPARATOR);
@@ -83,14 +85,18 @@ switch ($mode) {
 }
 
 if (file_exists($require_path.$controller.'.php')) {
+
     require_once $require_path.$controller.'.php';
     $controller = $controller.'_Controller';
     if (class_exists($controller)) {
+
         $object = new $controller($params, $action, 'ru_RU');
         $action = 'action_'.$action;
+
         $object->before();
 
         if (is_callable(array($object, $action))) {
+
             $object->$action();
             $object->after();
         }

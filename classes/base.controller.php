@@ -28,6 +28,7 @@ class Controller {
     }
 
     public function before() {
+
         $this->_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']) ? $_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest' : false;
         if (isset($_REQUEST['format'])) {
             if (strtolower($_REQUEST['format']) == 'json') {

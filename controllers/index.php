@@ -13,6 +13,7 @@ class Index_Controller extends Controller {
     public $panel = "panel.tpl";
 
     public function before() {
+
         parent::before();
 
         require_once PATH_CLASSES.'base.user.php';
